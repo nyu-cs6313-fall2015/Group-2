@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . '../PhpConsole/__autoload.php');
+require_once(__DIR__ . '/../PhpConsole/__autoload.php');
 
 $handler = PhpConsole\Handler::getInstance();
 $handler->start(); // start handling PHP errors & exceptions
