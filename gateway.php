@@ -79,22 +79,7 @@ try {
     $index = $index[0];
     //$url = "vgchead.poly.edu:8124" . $query;
     $url = "vidaserver1:1987/" . $query;
-    $result = "Unauthorized";
-    if($_SERVER['PHP_AUTH_PW'] == "8Tp138GMxi") {
-        $result = curl_get($url, $_SERVER['REQUEST_METHOD']);
-    }
-    elseif($indices[$index]){
-        if($indices[$index]["password"]) {
-            if($_SERVER['PHP_AUTH_PW'] == $indices[$index]["password"]){
-                $result = curl_get($url, $_SERVER['REQUEST_METHOD']);
-            } else {
-                http_response_code(401);
-                $result = "Wrong Password";
-            }
-        } else {
-            $result = curl_get($url, $_SERVER['REQUEST_METHOD']);
-        }
-    }
+    $result = curl_get($url, $_SERVER['REQUEST_METHOD']);
     echo $result;
 } catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n";
