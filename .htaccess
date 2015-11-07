@@ -2,6 +2,6 @@ Options +FollowSymLinks
 IndexIgnore */*
 # Turn on the RewriteEngine
 RewriteEngine On
-RewriteBase ~fhorta/pov/
+RewriteBase /projects/pov
 #  Rules
 RewriteRule ^(.*) gateway.php
