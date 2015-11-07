@@ -1,7 +1,4 @@
 <?php
-$indices = array(
-    "whs" => array("index" => "yelp", "server" => "vidaserver1", "port" => 1987)
-);
 function cors() {
     // Allow from any origin
     if (isset($_SERVER['HTTP_ORIGIN'])) {
