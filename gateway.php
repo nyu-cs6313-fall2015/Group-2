@@ -1,4 +1,7 @@
 <?php
+
+$connector = PhpConsole\Connector::getInstance();
+
 function cors() {
     // Allow from any origin
     if (isset($_SERVER['HTTP_ORIGIN'])) {
