@@ -1,6 +1,10 @@
 <?php
 
-$connector = PhpConsole\Connector::getInstance();
+require_once(__DIR__ . '../PhpConsole/__autoload.php');
+
+$handler = PhpConsole\Handler::getInstance();
+$handler->start(); // start handling PHP errors & exceptions
+$handler->getConnector()->setSourcesBasePath($_SERVER['DOCUMENT_ROOT']);
 
 function cors() {
     // Allow from any origin
