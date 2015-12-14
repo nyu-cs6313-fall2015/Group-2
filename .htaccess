@@ -1,7 +1,0 @@
-Options +FollowSymLinks
-IndexIgnore */*
-# Turn on the RewriteEngine
-RewriteEngine On
-RewriteBase /projects/pov
-#  Rules
-RewriteRule ^(.*) gateway.php
