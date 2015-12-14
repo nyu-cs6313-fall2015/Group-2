@@ -62,3 +62,20 @@ html, body, #gmaps {
     text-anchor: end !important;
     transform: rotate(-45deg);
 }
+
+.title {
+    position: absolute;
+    font-size: 23px;
+    z-index: 9999999;
+    font-family: sans-serif;
+    bottom: 0;
+    font-weight: bold;
+    left: 1px;
+    background: yellow;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.sub {
+    font-weight: 400;
+}
