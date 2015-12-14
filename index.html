@@ -1,107 +1,59 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html">
-  <title>Basic jQuery Ajax with PHP</title>
-  <meta name="author" content="Jake Rocheleau">
-  <link rel="shortcut icon" href="http://d15dxvojnvxp1x.cloudfront.net/assets/favicon.ico">
-  <link rel="icon" href="http://d15dxvojnvxp1x.cloudfront.net/assets/favicon.ico">
-  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
-  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-  <script type="text/javascript" src="js/ajax.js"></script>
+    <meta charset="UTF-8">
+    <title>Pluto Viewer</title>
+    <!--Css includes -->
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <link rel="stylesheet" href="css/histogram.css" type="text/css" />
+    <link rel="stylesheet" href="css/dc.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+
+    <!--Google maps -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBOZsfBza3E3iD2K6sYqbyUJ2O2fTpBVLI&libraries=geometry,places"></script>
+    <!--Util includes -->
+    <script type="text/javascript" src="lib/jquery.min.js"      ></script>
+    <script type="text/javascript" src="lib/sigslot_core.js"    ></script>
+    <script type="text/javascript" src="lib/underscore.min.js"  ></script>
+    <script type="text/javascript" src="lib/underscore.math.js" ></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="lib/bootstrap.min.js"  ></script>
+
+    <!--GL includes -->
+    <script type="text/javascript" src="lib/d3.min.js"          ></script>
+    <script type="text/javascript" src="lib/crossfilter.min.js" ></script>
+    <script type="text/javascript" src="lib/dc.min.js"          ></script>
+    <script type="text/javascript" src="lib/three.min.js"       ></script>
+    <script type="text/javascript" src="lib/threejs-layer.js"   ></script>
+    <!--Geometry includes -->
+    <script type="text/javascript" src="lib/earcut.js"          ></script>
+    <!--My includes -->
+    <script type="text/javascript" src="js/globals.js"          ></script>
+    <script type="text/javascript" src="js/cscale.js"           ></script>
+    <script type="text/javascript" src="js/styles.js"           ></script>
+    <script type="text/javascript" src="js/data.js"             ></script>
+    <script type="text/javascript" src="js/sigs.js"             ></script>
+    <script type="text/javascript" src="js/layer.js"            ></script>
+    <script type="text/javascript" src="js/map.js"              ></script>
+    <script type="text/javascript" src="js/ui.js"               ></script>
+    <script type="text/javascript" src="js/uiParts.js"          ></script>
+    <script type="text/javascript" src="js/histogram.js"        ></script>
+    <script type="text/javascript" src="js/histogramCard.js"    ></script>
+    <script type="text/javascript" src="js/scatter.js"          ></script>
+    <script type="text/javascript" src="js/timeline.js"          ></script>
+    <script type="text/javascript" src="js/scatterCard.js"      ></script>
+    <script type="text/javascript" src="js/triangulate.js"      ></script>
+    <script type="text/javascript" src="js/villages.js"></script>
+    <script type="text/javascript" src="js/main.js"             ></script>
 </head>
-
 <body>
-  <div id="w">
-    <h1>Basic jQuery Ajax &amp; PHP Demo</h1>
-    
-    <div id="profile" class="clearfix">
-      <div class="heading"> 
-        <h2>Someuser's Profile</h2>
-        <h3>Joined Nov 1st, 2013 - <span id="followercnt">18</span> Followers</h3>
-        <div id="followbtncontainer" class="btncontainer"><a href="#" id="followbtn" class="bigblue">Follow</a></div>
-      </div><!-- @end .heading -->
-      
-      <div class="avatar"><img src="img/avatar.jpg" alt="avatar" width="200" height="200"></div>
-    </div><!-- @end #profile -->
-    
-    <div id="followers" class="clearfix">
-      <h3>List of Followers</h3>
-      <div class="user">
-        <a href="#" class="clearfix">
-          <img src="img/default-avatar.png" class="avi">
-          <h4>jonny_mcd</h4>
-        </a>
-      </div>
-      
-      <div class="user">
-        <a href="#" class="clearfix">
-          <img src="img/default-avatar.png" class="avi">
-          <h4>greenkittens</h4>
-        </a>
-      </div>
-      
-      <div class="user">
-        <a href="#" class="clearfix">
-          <img src="img/default-avatar.png" class="avi">
-          <h4>computerz123</h4>
-        </a>
-      </div>
-      
-      <div class="user">
-        <a href="#" class="clearfix">
-          <img src="img/default-avatar.png" class="avi">
-          <h4>cool_sneakers</h4>
-        </a>
-      </div>
-
-      <div class="user">
-        <a href="#" class="clearfix">
-          <img src="img/default-avatar.png" class="avi">
-          <h4>littleredrose</h4>
-        </a>
-      </div>
-      
-      <div class="user">
-        <a href="#" class="clearfix">
-          <img src="img/default-avatar.png" class="avi">
-          <h4>63yoo</h4>
-        </a>
-      </div>
-      
-      <div class="user">
-        <a href="#" class="clearfix">
-          <img src="img/default-avatar.png" class="avi">
-          <h4>im_a_rocketman</h4>
-        </a>
-      </div>
-
-      <div class="user">
-        <a href="#" class="clearfix">
-          <img src="img/default-avatar.png" class="avi">
-          <h4>spambot9000</h4>
-        </a>
-      </div>
-      
-      <div class="user">
-        <a href="#" class="clearfix">
-          <img src="img/default-avatar.png" class="avi">
-          <h4>kgriffin</h4>
-        </a>
-      </div>
-      
-      <div class="user">
-        <a href="#" class="clearfix">
-          <img src="img/default-avatar.png" class="avi">
-          <h4>entranced</h4>
-        </a>
-      </div>
-    </div><!-- @end #followers -->
-    
-    <div id="loadmorefollowers">
-      <a href="#pg1" id="morefllwrs" class="bigblue thinblue">Load more followers</a>
-    </div><!-- @end #loadmorefollowers -->
-  </div><!-- @end #w -->
+    <!-- Map div -->
+    <div id="gmaps"> </div>
+    <!-- Main menu -->
+    <div id="mainMenu" class="bgStyle"></div>
+    <!-- Render menu -->
+    <div id="renderMenu" class="bgStyle"></div>
+    <!-- Cards div -->
+    <div id="cards"></div>
 </body>
 </html>
