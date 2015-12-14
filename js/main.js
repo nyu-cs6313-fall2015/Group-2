@@ -57,3 +57,5 @@ window.onload = function() {
     var mlbApp = pluto.Main();
     mlbApp.run();
 };
+
+alert('Hi, here is Felipe. I\'m sick but working from home :]')

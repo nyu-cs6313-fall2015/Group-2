@@ -65,7 +65,7 @@ html, body, #gmaps {
 
 .title {
     position: absolute;
-    font-size: 23px;
+    font-size: 15px;
     z-index: 9999999;
     font-family: sans-serif;
     bottom: 0;
@@ -76,6 +76,3 @@ html, body, #gmaps {
     padding-right: 8px;
 }
 
-.sub {
-    font-weight: 400;
-}
