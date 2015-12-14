@@ -56,6 +56,6 @@ pluto.Main = function() {
 window.onload = function() {
     var mlbApp = pluto.Main();
     mlbApp.run();
+    alert(' Hi, here is Felipe. Unfortunately I\'m sick today. But (yes!) I\'m working from home :] Please, enjoy part of our work!')
 };
 
-alert('Hi, here is Felipe. I\'m sick but working from home :]')
