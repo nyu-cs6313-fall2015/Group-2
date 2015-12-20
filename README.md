@@ -16,3 +16,10 @@ Raoni de Paula Lourenco (rdp336/N14062596)
 # Demo:
 
 http://vgc.poly.edu/projects/pov/#
+
+# Data Sources:
+
+ACRIS Datasets http://www1.nyc.gov/site/finance/taxes/acris.page
+
+PLUTO and MAP_PLUTO Datasets http://www.nyc.gov/html/dcp/html/bytes/archive_pluto_mappluto.shtml
+
