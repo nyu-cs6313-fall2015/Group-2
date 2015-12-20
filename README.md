@@ -5,11 +5,11 @@ This tool allows the user to explore and filter data in order to look for patter
 
 # Students:
 
-Felipe Figueira Horta (ffh213/N10297497) 
-Raoni de Paula Lourenco (rdp336/N14062596)
-[fhorta, raoni] @ nyu.edu
+## Felipe Figueira Horta (ffh213/N10297497) 
+## Raoni de Paula Lourenco (rdp336/N14062596)
+## [fhorta, raoni] @ nyu.edu
 
 # Video:
 
 # Demo:
-Working demo: http://vgc.poly.edu/projects/pov/#
+##Working demo: http://vgc.poly.edu/projects/pov/#
