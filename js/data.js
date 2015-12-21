@@ -3,43 +3,43 @@ pluto.Data = function (){
     // exported object
     var exports = {};
 
-    // load the available datasets
-    exports.availableNames = function(){
-        $.get(
-            '/availableNames',
-            {},
-            function(data){
-                // json json
-                var jsonData = JSON.parse(data);
-                // store the json
-                pluto.availablePlutoNames       = jsonData.pluto;
-                pluto.availableFunctionNames[0] = jsonData.functionLinear;
-                pluto.availableFunctionNames[1] = jsonData.functionOrdinal;
+//     // load the available datasets
+//     exports.availableNames = function(){
+//         $.get(
+//             '/availableNames',
+//             {},
+//             function(data){
+//                 // json json
+//                 var jsonData = JSON.parse(data);
+//                 // store the json
+//                 pluto.availablePlutoNames       = jsonData.pluto;
+//                 pluto.availableFunctionNames[0] = jsonData.functionLinear;
+//                 pluto.availableFunctionNames[1] = jsonData.functionOrdinal;
 
-                // emmit signal
-                __sig__.emit(__sig__.availableNamesDone);
-            }
-        );
-    };
+//                 // emmit signal
+//                 __sig__.emit(__sig__.availableNamesDone);
+//             }
+//         );
+//     };
 
-    // load a pluto json
-    exports.loadDataSet = function(){
-        $.get(
-            '/loadDataSet',
-            {
-              'name': pluto.selectedPlutoName
-            },
-            function(data){
-                // json json
-                var jsonData = JSON.parse(data);
-                // stores the crossfilter
-                pluto.loadedDataSet[pluto.selectedPlutoName] = crossfilter(jsonData);
+//     // load a pluto json
+//     exports.loadDataSet = function(){
+//         $.get(
+//             '/loadDataSet',
+//             {
+//               'name': pluto.selectedPlutoName
+//             },
+//             function(data){
+//                 // json json
+//                 var jsonData = JSON.parse(data);
+//                 // stores the crossfilter
+//                 pluto.loadedDataSet[pluto.selectedPlutoName] = crossfilter(jsonData);
 
-                // emmit signal
-                __sig__.emit(__sig__.loadDataSetDone);
-            }
-        );
-    };
+//                 // emmit signal
+//                 __sig__.emit(__sig__.loadDataSetDone);
+//             }
+//         );
+//     };
 
     // load the available datasets from a json file
     exports.availableNamesFile = function(){
@@ -47,7 +47,7 @@ pluto.Data = function (){
             // parses json
             var jsonData = JSON.parse(json);
             // store the json
-            pluto.availablePlutoNames       = jsonData.pluto;
+//             pluto.availablePlutoNames       = jsonData.pluto;
             pluto.availableFunctionNames[0] = jsonData.functionLinear;
             pluto.availableFunctionNames[1] = jsonData.functionOrdinal;
 
@@ -75,6 +75,9 @@ pluto.Data = function (){
                 __sig__.emit(__sig__.loadDataSetDone);
             else
                 __sig__.emit(__sig__.loadDataSetDoneNoRender)
+            
+            __sig__.emit(__sig__.loadFunctionView);
+            
         });
 
     };

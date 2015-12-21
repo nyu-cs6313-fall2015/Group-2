@@ -4,8 +4,8 @@ pluto.Timeline = function(){
     var cdim  = undefined;
 
     // chart size
-    var width  = 600;
-    var height = 190;
+    var width  = 800;
+    var height = 200;
 
     // bins creation variables
     var max = [0,0];
@@ -17,11 +17,13 @@ pluto.Timeline = function(){
 
     // creates the crossfilter dimension
     function createDimension(selectedProperty){
+        
         // current function
         var func = pluto.loadedDataSet[pluto.selectedPlutoName];
 
         // creates the basic dimension
         for(var id=0; id<2; id++){
+            
             if(cdim){
                 cdim.filterAll();
                 cdim.dispose();
@@ -107,7 +109,7 @@ pluto.Timeline = function(){
         chart.render();
     }
 
-    // histogram construction
+    // timeline construction
     exports.create = function(parentDiv,selectedProperty){
         // initialize dimension
         createDimension(selectedProperty);
@@ -120,6 +122,7 @@ pluto.Timeline = function(){
         if(cdim){
             cdim.filterAll();
             cdim.dispose();
+            alert('teste');
         }
     };
 

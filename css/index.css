@@ -39,6 +39,12 @@ html, body, #gmaps {
     left:5px;
 }
 
+#timeline{
+    position: fixed;
+    top: 50px;
+    left:5px;
+}
+
 .card{
     width: 400px;
     height: 250px;
@@ -76,3 +82,12 @@ html, body, #gmaps {
     padding-right: 8px;
 }
 
+button#addTimelineCard {
+    margin-right: 7px;
+}
+
+ul.dropdown-menu {
+    font-size: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+}
