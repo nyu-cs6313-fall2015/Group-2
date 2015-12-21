@@ -15,7 +15,7 @@ Raoni de Paula Lourenco (rdp336/N14062596)
 
 # Demo:
 
-http://vgc.poly.edu/projects/pov/#
+http://nyu-cs6313-fall2015.github.io/Group-2/index
 
 # Data Sources:
 
