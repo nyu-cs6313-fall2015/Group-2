@@ -14,8 +14,6 @@ Raoni de Paula Lourenco (rdp336/N14062596)
 
 [fhorta, raoni] @ nyu.edu
 
-# Video:
-
 # Demo:
 
 http://nyu-cs6313-fall2015.github.io/Group-2/index
@@ -25,4 +23,8 @@ http://nyu-cs6313-fall2015.github.io/Group-2/index
 ACRIS Datasets http://www1.nyc.gov/site/finance/taxes/acris.page
 
 PLUTO and MAP_PLUTO Datasets http://www.nyc.gov/html/dcp/html/bytes/archive_pluto_mappluto.shtml
+
+# Final Report:
+
+https://dl.dropboxusercontent.com/u/19732343/POV-InfoVis.pdf
 
