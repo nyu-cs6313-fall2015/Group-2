@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>DESPERATE-MODE</title>
+<title>POV-Analysis</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -171,7 +171,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="o">%%</span><span class="k">time</span>
@@ -179,7 +179,6 @@ import pandas as pd
 from village.VillageAnalyser import *
 from village.settings_fhorta import __settings__
 va = VillageAnalyser(__settings__, update=False)
-# va.export(&#39;data/result/&#39;)
 </pre></div>
 
 </div>
@@ -192,9 +191,28 @@ va = VillageAnalyser(__settings__, update=False)
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(ALL) Backup was found
-CPU times: user 36.7 s, sys: 19.9 s, total: 56.6 s
-Wall time: 1min
+<pre>
+**********************************************************************  Processing Pluto
+0%                  100%
+[######################] | ETA[sec]: 0.000 
+Total time elapsed: 89.893 sec
+(Polygon) Backup was found
+(BBL) Backup was found
+
+**********************************************************************  Finding prices
+0%                          100%
+[##############################] | ETA[sec]: 0.000 
+Total time elapsed: 18.394 sec
+	 Found:  14953
+	 Failed:  0
+	 No lotarea:  35
+	 No village:  115169
+	 No polygon:  0
+	 Not in pluto:  25
+	 Out of time range:  0
+(ALL) Backup was created/updated!
+CPU times: user 2min 44s, sys: 2min 52s, total: 5min 36s
+Wall time: 10min 20s
 </pre>
 </div>
 </div>
@@ -205,7 +223,22 @@ Wall time: 1min
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># va.export(&#39;/Users/fhorta/projects/pov/json/&#39;)</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s">&#39;/Users/fhorta/projects/pov/json/&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">va</span><span class="o">.</span><span class="n">export_transactions</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">export_any</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -988,7 +1021,7 @@ sem       mean_price     sqrm    #  var_price      mean_assess  var_assess
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x136e8b748&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23b9fdc18&gt;</pre>
 </div>
 
 </div>
@@ -1460,7 +1493,7 @@ DFDKXqFQKIoB/w/8J+/QPjJmrgAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x154cd34a8&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x22199c278&gt;</pre>
 </div>
 
 </div>
@@ -1950,7 +1983,7 @@ haIYoJS9QqFQFAOUslcoFIpiwP8DlLi+LBpFK28AAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15b9d9ef0&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4d7aa2c50&gt;</pre>
 </div>
 
 </div>
@@ -2281,7 +2314,7 @@ AAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15ba44240&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4e1d3bcc0&gt;</pre>
 </div>
 
 </div>
@@ -2873,7 +2906,7 @@ Exi6B61Go9GcAmhjr9FoNKcA2thrNBrNKYA29hqNRnMKoI29RqPRnAJoY6/RaDSnANrYazQazSnA
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15babee80&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4e1d3b518&gt;</pre>
 </div>
 
 </div>
@@ -3337,7 +3370,7 @@ ABhlbzAYDBUAo+wNBoOhAmCUvcFgMFQA/h9E0w4aIa2+7gAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15bb3dc18&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x3caed80b8&gt;</pre>
 </div>
 
 </div>
@@ -3837,7 +3870,7 @@ UGQBlLBXKBSKLIAS9gqFQpEFUMJeoVAosgD/B+nyVyogI4CVAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15ba41d30&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23b9e7dd8&gt;</pre>
 </div>
 
 </div>
@@ -4050,7 +4083,7 @@ AFCwFxEJAAV7EZEAULAXEQkABXsRkQBQsBcRCQAFexGRAPhf4OSUIfWYA3AAAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15bc09c50&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4e1ccf0b8&gt;</pre>
 </div>
 
 </div>
@@ -4596,7 +4629,7 @@ GiCEvUAgEFQDhLAXCASCaoAQ9gKBQFAN+H+FV1Go/QmbBgAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15c8ca278&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4e1d588d0&gt;</pre>
 </div>
 
 </div>
@@ -5120,7 +5153,7 @@ QqIF8P/cnZmAJh5OBgAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15c8b8908&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23b4f1710&gt;</pre>
 </div>
 
 </div>
@@ -5509,7 +5542,7 @@ fvk4fvkUEb+2SvZmZjY+/g1aM7MScLI3MysBJ3szsxJwsjczKwEnezOzEnCyNzMrASd7M7MS+B8s
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15cac7710&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x3cabb4208&gt;</pre>
 </div>
 
 </div>
@@ -6085,7 +6118,7 @@ G3sdHR2dCwDd2Ovo6OhcAOjGXkdHR+cCQDf2Ojo6OhcA/x9p2DuyrsVKkwAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15cc2ac88&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23ad35748&gt;</pre>
 </div>
 
 </div>
@@ -6582,7 +6615,7 @@ QMReEAShH/C/H/ZF4ANJsMcAAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15cc8ee48&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x3caea5da0&gt;</pre>
 </div>
 
 </div>
@@ -6840,7 +6873,7 @@ dFEW4I0xpouyAG+MMV2UBXhjjOmi/h8a2eF84JjjSwAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15cca9550&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23b7f29e8&gt;</pre>
 </div>
 
 </div>
@@ -7284,7 +7317,7 @@ K4qixDCqxBVFUWIYVeKKoigxjCpxRVGUGEaVuKIoSgzzb6nt0ifiPkh2AAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15cd7a1d0&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23b0846d8&gt;</pre>
 </div>
 
 </div>
@@ -7817,7 +7850,7 @@ A+ut/a8QmXsmAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15cdd7470&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4e1c99828&gt;</pre>
 </div>
 
 </div>
@@ -8276,7 +8309,7 @@ IUYpcYVCoSjE/D+cU6bjFzFvogAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15ce4f438&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4e1c766d8&gt;</pre>
 </div>
 
 </div>
@@ -8785,7 +8818,7 @@ lLBXKBSKcsD/A1vNfKVMu/7IAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15ceac860&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4e1c58f28&gt;</pre>
 </div>
 
 </div>
@@ -9054,7 +9087,7 @@ iBhjjImZhYgxxpiYWYgYY4yJ2f8Hz+WXY7rC79EAAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15cecffd0&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4d4375470&gt;</pre>
 </div>
 
 </div>
@@ -9454,7 +9487,7 @@ WP28x2rnG/7Qr144cYvFYrF4h91P3GKxWEIY68QtFoslhLFO3GKxWEIY68QtFoslhLFO3GKxWEIY
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15cfa69b0&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4d71d4908&gt;</pre>
 </div>
 
 </div>
@@ -9862,7 +9895,7 @@ GEnM/wE9hNa1H+fwbgAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15d113438&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4e1b66e48&gt;</pre>
 </div>
 
 </div>
@@ -10205,7 +10238,7 @@ AABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15d17f978&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23b0741d0&gt;</pre>
 </div>
 
 </div>
@@ -10712,7 +10745,7 @@ TkSuQmCC
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15d1e80b8&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23afefba8&gt;</pre>
 </div>
 
 </div>
@@ -10916,7 +10949,7 @@ K6BgLyLSCijYi4i0Agr2IiKtgIK9iEgr8P8AmOL3F5eftD4AAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15d1fc898&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23afef978&gt;</pre>
 </div>
 
 </div>
@@ -11380,7 +11413,7 @@ RH31npaejgAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15d3d37f0&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23b7bc9e8&gt;</pre>
 </div>
 
 </div>
@@ -11844,7 +11877,7 @@ iQsjlbhEIpG4MFKJSyQSiQvzX9Jsq4BZ+mzWAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15d439e10&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4e1da26a0&gt;</pre>
 </div>
 
 </div>
@@ -12195,7 +12228,7 @@ Uw22tQ44i3kAAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15d4a5470&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x4e1b8d6a0&gt;</pre>
 </div>
 
 </div>
@@ -12738,7 +12771,7 @@ TQtAi71Go9G0AP4fgXUWRr9RR/wAAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15d5170f0&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23b989550&gt;</pre>
 </div>
 
 </div>
@@ -13255,7 +13288,7 @@ ViBNSvmnrh5LT0PPnW/o+fMNPX++4Y/561HGXqPRaDSdQ5dL0Gg0mj6ANvYajUbTB9DGXqPRaPoA
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15d59ae10&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23ad73dd8&gt;</pre>
 </div>
 
 </div>
@@ -13694,7 +13727,7 @@ QIO9UkolAA32SimVADTYK6VUAtBgr5RSCUCDvVJKJYD/BzvC+kuubG4fAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;matplotlib.figure.Figure at 0x15d5fc4e0&gt;</pre>
+<pre>&lt;matplotlib.figure.Figure at 0x23b4772e8&gt;</pre>
 </div>
 
 </div>
@@ -14266,117 +14299,6 @@ LfYajUbTDtBir9FoNO0ALfYajUbTDtBir9FoNO2A/w/XJA+ZBB5TrwAAAABJRU5ErkJggg==
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">va</span><span class="o">.</span><span class="n">get_total_prices_sem</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&apos;2004/1&apos;: 532,
- &apos;2004/2&apos;: 764,
- &apos;2005/1&apos;: 690,
- &apos;2005/2&apos;: 1087,
- &apos;2006/1&apos;: 654,
- &apos;2006/2&apos;: 865,
- &apos;2007/1&apos;: 830,
- &apos;2007/2&apos;: 1332,
- &apos;2008/1&apos;: 567,
- &apos;2008/2&apos;: 696,
- &apos;2009/1&apos;: 245,
- &apos;2009/2&apos;: 262,
- &apos;2010/1&apos;: 322,
- &apos;2010/2&apos;: 652,
- &apos;2011/1&apos;: 412,
- &apos;2011/2&apos;: 697,
- &apos;2012/1&apos;: 577,
- &apos;2012/2&apos;: 1240,
- &apos;2013/1&apos;: 543,
- &apos;2013/2&apos;: 1019,
- &apos;2014/1&apos;: 653,
- &apos;2014/2&apos;: 314}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="nb">input</span> <span class="o">=</span> <span class="s">&#39;data/result/_ALL_filtered_12210659.csv&#39;</span>
-<span class="n">output</span> <span class="o">=</span> <span class="s">&#39;/Users/fhorta/projects/pov/json/timeline.json&#39;</span>
-
-<span class="kn">import</span> <span class="nn">simplejson</span> <span class="k">as</span> <span class="nn">json</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="k">False</span><span class="p">,)</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
-<span class="n">j</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s">&#39;records&#39;</span><span class="p">)</span>
-<span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre>%%bash
-cat /Users/fhorta/projects/pov/json/timeline.json
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&#39;data/result/_ALL_TRANSACTIONS_12200153.csv&#39;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="k">False</span><span class="p">,)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 
