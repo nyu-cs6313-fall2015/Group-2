@@ -18,6 +18,10 @@ Raoni de Paula Lourenco (rdp336/N14062596)
 
 http://nyu-cs6313-fall2015.github.io/Group-2/index
 
+# Video:
+
+https://vimeo.com/149715110
+
 # Data Sources:
 
 ACRIS Datasets http://www1.nyc.gov/site/finance/taxes/acris.page
