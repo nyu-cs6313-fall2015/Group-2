@@ -5,7 +5,7 @@
 
 .axis line, .axis path {
     fill: none;
-    stroke: #000;
+    stroke: black;
     shape-rendering: crispEdges;
 }
 
