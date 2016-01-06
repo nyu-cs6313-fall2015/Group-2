@@ -104,7 +104,7 @@ pluto.Map = function() {
         // creates the map
         var map = new google.maps.Map(container,
         {
-            zoom: 16,
+            zoom: 15,
             mapTypeControl: false,
             streetViewControl: false,
             center: new google.maps.LatLng(40.756119,-73.983159),

@@ -26,6 +26,29 @@ pluto.Ui = function() {
         });
     }
 
+    // creates the add cart button
+    function addTimelineCard(parentDiv){
+        
+        var buttonId = "addTimelineCard";
+
+        // adds the button
+        var btn = pluto.UiParts.Button(parentDiv,buttonId, "glyphicon glyphicon-cloud");
+
+        btn.on('click', function(){
+            // avoid errors
+            if(!Object.keys(pluto.loadedDataSet).length)
+                return;
+
+            // increments the number of active cards
+            pluto.globalCardId += 1;
+
+            // creates a new card
+            var card = new pluto.TimelineCard();
+            // creates the card
+            card.initCard();
+        });
+    }
+
 
     // creates the add cart button
     function addScatterCard(parentDiv){
@@ -59,7 +82,7 @@ pluto.Ui = function() {
         // gets the list
         var ul = drop.select("ul");
         // sets the button label
-        drop.select("button").html("Select one json");
+        drop.select("button").html("Select neighborhood");
 
         // binds json to items and appends
         ul.selectAll("li")
@@ -80,42 +103,43 @@ pluto.Ui = function() {
                 // changes selected
                 else
                     __sig__.emit(__sig__.loadDataSetDone);
+                
             });
     }
 
     // creates the pluto Selector
-    function plutoSelectorCompare(parentDiv){
-        var dropId = "plutoSelectorCompare";
+//     function plutoSelectorCompare(parentDiv){
+//         var dropId = "plutoSelectorCompare";
 
-        // adds the drop down
-        var drop = pluto.UiParts.DropDown(parentDiv,dropId,"leftSpace");
+//         // adds the drop down
+//         var drop = pluto.UiParts.DropDown(parentDiv,dropId,"leftSpace");
 
-        // gets the list
-        var ul = drop.select("ul");
-        // sets the button label
-        drop.select("button").html("Select one json");
+//         // gets the list
+//         var ul = drop.select("ul");
+//         // sets the button label
+//         drop.select("button").html("Select one json");
 
-        // binds json to items and appends
-        ul.selectAll("li")
-            .data(pluto.availablePlutoNames)
-            .enter()
-            .append('li')
-            .html(function(d) { return '<a href="#">' + d + '</a>'; });
+//         // binds json to items and appends
+//         ul.selectAll("li")
+//             .data(pluto.availablePlutoNames)
+//             .enter()
+//             .append('li')
+//             .html(function(d) { return '<a href="#">' + d + '</a>'; });
 
-        // updates the button when selecting an item
-        ul.selectAll("li")
-            .on('click', function(d){
-                d3.select('#'+ dropId +' button').html(d);
-                pluto.selectedPlutoCompareName = d;
+//         // updates the button when selecting an item
+//         ul.selectAll("li")
+//             .on('click', function(d){
+//                 d3.select('#'+ dropId +' button').html(d);
+//                 pluto.selectedPlutoCompareName = d;
 
-                // already loaded
-                if( !(pluto.selectedPlutoCompareName in pluto.loadedPluto) )
-                    __sig__.emit(__sig__.loadDataSet, false);
-                // changes selected
-                else
-                    __sig__.emit(__sig__.loadDataSetDoneNoRender);
-            });
-    }
+//                 // already loaded
+//                 if( !(pluto.selectedPlutoCompareName in pluto.loadedPluto) )
+//                     __sig__.emit(__sig__.loadDataSet, false);
+//                 // changes selected
+//                 else
+//                     __sig__.emit(__sig__.loadDataSetDoneNoRender);
+//             });
+//     }
 
     // creates the add cart button
     function addProperty(parentDiv){
@@ -169,7 +193,11 @@ pluto.Ui = function() {
         var mainMenu = d3.select("#mainMenu");
 
         // creates the add card button
+//         addTimelineCard(mainMenu);
+
+        // creates the add card button
         addHistogramCard(mainMenu);
+
         // creates the add card button
         addScatterCard(mainMenu);
         // creates the pluto selector

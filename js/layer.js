@@ -38,7 +38,7 @@ pluto.Layer = function(){
 
         // material definition
         var mtl = new THREE.LineBasicMaterial({
-            color: new THREE.Color("rgb(160,160,160)")
+            color: new THREE.Color("rgb(200,200,200)")
         });
 
         // loops over the polygons

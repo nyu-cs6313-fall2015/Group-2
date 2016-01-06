@@ -2,7 +2,7 @@ pluto.styles = [
     {
         "stylers": [
           { "visibility": "simplified" },
-          { "saturation": -90 }
+          { "saturation": -100 }
         ]
     },
     {
